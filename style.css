@@ -1,0 +1,270 @@
+:root {
+    --bg-color: #f5f1eb;
+    --text-color: #333;
+    --primary-color: #3a5a40;
+    --secondary-color: #a2cdb5;
+    --accent-color: #ccb299;
+}
+
+/* ======================== */
+/* ESTILOS DE LA BARRA SUPERIOR (Añadidos) */
+/* ======================== */
+.top-navbar {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed; /* Fixed at the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #a2cdb5; 
+}
+
+/* ======================== */
+/* ESTILOS DE LA PÁGINA (Tus estilos) */
+/* ======================== */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    /* ARREGLO AÑADIDO: Deja espacio para la barra fija */
+    padding-top: 50px; 
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1607795390093-38a43606521c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.logo {
+    max-width: 100%; /* Ensure responsiveness */
+    height: auto;    /* Maintain aspect ratio */
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    /* ARREGLO AÑADIDO: Corrige el ancla del scroll */
+    scroll-margin-top: 50px; 
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.details {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.note {
+    font-style: italic;
+    color: #666;
+}
+
+.voucher-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.voucher-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.final-message {
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+
+/* --- Idea 1: Animación Ken Burns --- */
+
+.hero {
+    /* Le decimos que la imagen de fondo va a tener una animación */
+    animation: kenburns 20s ease-out infinite;
+}
+
+/* Definimos la animación */
+@keyframes kenburns {
+    0% {
+        background-size: 100% auto;
+        background-position: center;
+    }
+    50% {
+        background-size: 120% auto; /* Zoom in */
+        background-position: center 40%; /* Move slightly */
+    }
+    100% {
+        background-size: 100% auto;
+        background-position: center;
+    }
+}
+
+
+
+/* --- Idea 3: Estilos del Modal y Link --- */
+
+.terms-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ddd;
+}
+.terms-link a {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.terms-link input {
+    margin-right: 5px;
+}
+
+.modal-overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: slide-down 0.3s ease-out;
+}
+.modal-content h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+.modal-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+.modal-content li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.close-modal:hover,
+.close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

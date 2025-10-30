@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventuras Salvatore Experiences</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="top-navbar">
+        <a href="https://maps.app.goo.gl/MaPikiL4cUPJ9bte6" target="_blank" class="navbar-link">
+             Toca aca para ver la locaclización sorpresa
+        </a>
+    </nav>
+    <header class="hero">
+        <div class="hero-content">
+            <svg width="380" height="80" viewBox="0 0 380 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo">
+              <style>
+                .aventuras-text { font-family: 'Playfair Display', serif; font-weight: bold; font-size: 36px; fill: white; }
+                .salvatore-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 24px; fill: white; }
+                .experiences-text { font-family: 'Poppins', sans-serif; font-size: 20px; fill: white; }
+              </style>
+              <text x="10" y="40" class="aventuras-text">Aventuras</text>
+              <text x="210" y="40" class="salvatore-text">Salvatore</text>
+              <text x="10" y="70" class="experiences-text">Experiences</text>
+            </svg>
+            <h1> ¡Felicidades Micol!</h1>
+            <p>Has sido seleccionada para vivir una experiencia única</p>
+            <a href="#description" class="btn" id="btn-aventura">Descubrí tu aventura</a>
+            <div class="terms-link">
+                <input type="checkbox" id="adventure-agree" disabled checked>
+                <label for="adventure-agree">He leído y acepto el <a href="#" id="open-modal-link">Acuerdo de Aventura</a>.</label>
+            </div>
+        </div>
+    </header>
+
+    <section id="description" class="section">
+        <h2>Aventura Salvatore - Edición Exclusiva</h2>
+        <p>Una aventura diseñada para vos, por un equipo de expertos en tus gustos y pasiones</p>
+        <div class="details">
+            <p><strong>Incluye:</strong> transporte privado, picnic, saltos y meterse al agua<br> y un dia que recordaras para siempre.</p>
+            <p class="note">todo esto viene con besitos incluidos</p>
+        </div>
+    </section>
+
+    <section id="voucher" class="section">
+        <h2>Tu reserva está confirmada</h2>
+        <div class="voucher-card">
+            <div class="voucher-header">
+                <h3>Voucher de Experiencia</h3>
+                <span>Código de reserva: EXP-PTR2025-01</span>
+            </div>
+            <div class="voucher-body">
+                <p><strong>Participante:</strong> Micol Jopia</p>
+                <p><strong>Experiencia:</strong> Dia inigualalable en Potrerillos</p>
+                <p><strong>Fecha:</strong> Lo mejor, es que es cuando quieras!</p>
+                <p><strong>Ubicacion:</strong> Es tan secreta que nisiquiera nosotros sabemos donde es!</p>
+            </div>
+        </div>
+        <p class="final-message">Prepará tu mochila y tu espíritu aventurero</p>
+    </section>
+
+    <footer>
+        <p>En esta empresa apreciamos a nuestra cliente mas fiel, que siempre esta para nuestras aventuras. Te amamos mucho. Gracias!</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<div id="modal-tyc" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-modal" id="close-modal">&times;</span>
+        <h2>Términos y Condiciones de la Aventura</h2>
+        <p>Al aceptar, la participante (Micol Jopia) se compromete a:</p>
+        <ul>
+            <li> Disfrutar de cada segundo del dia</li>
+            <li> Dejarse sorprender por el organizador (que es un lindote).</li>
+            <li> Darle muchos besos al lindote mencionado previamente</li>
+            <li> Traer el mejor espíritu aventurero.</li>
+        </ul>
+        <p><strong>El incumplimiento de estos términos resultará en... sparring de besos.</strong></p>
+    </div>
+</div>
+
+</body>
+</html>
